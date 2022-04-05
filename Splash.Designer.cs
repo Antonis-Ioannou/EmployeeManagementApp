@@ -31,7 +31,7 @@ namespace EmployeeManagementApp
         {
             this.splashTitle = new System.Windows.Forms.Label();
             this.splashCredit = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.MyProgress = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.SuspendLayout();
             // 
             // splashTitle
@@ -39,7 +39,7 @@ namespace EmployeeManagementApp
             this.splashTitle.AutoSize = true;
             this.splashTitle.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splashTitle.ForeColor = System.Drawing.Color.OrangeRed;
-            this.splashTitle.Location = new System.Drawing.Point(103, 9);
+            this.splashTitle.Location = new System.Drawing.Point(107, 9);
             this.splashTitle.Name = "splashTitle";
             this.splashTitle.Size = new System.Drawing.Size(316, 28);
             this.splashTitle.TabIndex = 0;
@@ -50,18 +50,26 @@ namespace EmployeeManagementApp
             this.splashCredit.AutoSize = true;
             this.splashCredit.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splashCredit.ForeColor = System.Drawing.Color.OrangeRed;
-            this.splashCredit.Location = new System.Drawing.Point(188, 225);
+            this.splashCredit.Location = new System.Drawing.Point(204, 225);
             this.splashCredit.Name = "splashCredit";
             this.splashCredit.Size = new System.Drawing.Size(133, 17);
             this.splashCredit.TabIndex = 1;
             this.splashCredit.Text = "Developed by aidubxr";
             // 
-            // progressBar1
+            // MyProgress
             // 
-            this.progressBar1.Location = new System.Drawing.Point(191, 123);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(130, 23);
-            this.progressBar1.TabIndex = 2;
+            this.MyProgress.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.MyProgress.FillThickness = 10;
+            this.MyProgress.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.MyProgress.ForeColor = System.Drawing.Color.White;
+            this.MyProgress.Location = new System.Drawing.Point(195, 55);
+            this.MyProgress.Minimum = 0;
+            this.MyProgress.Name = "MyProgress";
+            this.MyProgress.ProgressThickness = 10;
+            this.MyProgress.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.MyProgress.Size = new System.Drawing.Size(160, 160);
+            this.MyProgress.TabIndex = 2;
+            this.MyProgress.Text = "guna2CircleProgressBar1";
             // 
             // Splash
             // 
@@ -69,7 +77,7 @@ namespace EmployeeManagementApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(523, 251);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.MyProgress);
             this.Controls.Add(this.splashCredit);
             this.Controls.Add(this.splashTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -85,7 +93,7 @@ namespace EmployeeManagementApp
 
         private System.Windows.Forms.Label splashTitle;
         private System.Windows.Forms.Label splashCredit;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar MyProgress;
     }
 }
 
