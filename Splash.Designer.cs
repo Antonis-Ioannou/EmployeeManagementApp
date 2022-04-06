@@ -38,7 +38,7 @@ namespace EmployeeManagementApp
             // 
             this.splashTitle.AutoSize = true;
             this.splashTitle.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splashTitle.ForeColor = System.Drawing.Color.OrangeRed;
+            this.splashTitle.ForeColor = System.Drawing.Color.DarkCyan;
             this.splashTitle.Location = new System.Drawing.Point(107, 9);
             this.splashTitle.Name = "splashTitle";
             this.splashTitle.Size = new System.Drawing.Size(316, 28);
@@ -49,7 +49,7 @@ namespace EmployeeManagementApp
             // 
             this.splashCredit.AutoSize = true;
             this.splashCredit.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splashCredit.ForeColor = System.Drawing.Color.OrangeRed;
+            this.splashCredit.ForeColor = System.Drawing.Color.DarkCyan;
             this.splashCredit.Location = new System.Drawing.Point(180, 225);
             this.splashCredit.Name = "splashCredit";
             this.splashCredit.Size = new System.Drawing.Size(175, 17);

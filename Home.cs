@@ -16,5 +16,19 @@ namespace EmployeeManagementApp
         {
             InitializeComponent();
         }
+
+        private void homeEmployee_Click(object sender, EventArgs e)
+        {
+            Employee emp = new Employee();
+            emp.Show();
+            this.Hide();
+        }
+
+        private void logoutIcon_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+            this.Hide();
+        }
     }
 }
