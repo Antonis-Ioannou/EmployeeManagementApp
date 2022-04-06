@@ -50,11 +50,11 @@ namespace EmployeeManagementApp
             this.splashCredit.AutoSize = true;
             this.splashCredit.Font = new System.Drawing.Font("MV Boli", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splashCredit.ForeColor = System.Drawing.Color.OrangeRed;
-            this.splashCredit.Location = new System.Drawing.Point(204, 225);
+            this.splashCredit.Location = new System.Drawing.Point(180, 225);
             this.splashCredit.Name = "splashCredit";
-            this.splashCredit.Size = new System.Drawing.Size(133, 17);
+            this.splashCredit.Size = new System.Drawing.Size(175, 17);
             this.splashCredit.TabIndex = 1;
-            this.splashCredit.Text = "Developed by aidubxr";
+            this.splashCredit.Text = "Developed by aidubxr 2022";
             // 
             // MyProgress
             // 

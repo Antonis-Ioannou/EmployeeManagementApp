@@ -43,11 +43,11 @@ namespace EmployeeManagementApp
             this.splashTitle.AutoSize = true;
             this.splashTitle.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splashTitle.ForeColor = System.Drawing.Color.OrangeRed;
-            this.splashTitle.Location = new System.Drawing.Point(380, 9);
+            this.splashTitle.Location = new System.Drawing.Point(313, 9);
             this.splashTitle.Name = "splashTitle";
-            this.splashTitle.Size = new System.Drawing.Size(80, 28);
+            this.splashTitle.Size = new System.Drawing.Size(147, 28);
             this.splashTitle.TabIndex = 1;
-            this.splashTitle.Text = "aidubxr";
+            this.splashTitle.Text = "aidubxr 2022";
             // 
             // userId
             // 
