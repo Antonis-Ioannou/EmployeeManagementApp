@@ -43,9 +43,9 @@ namespace EmployeeManagementApp
             this.empGender = new System.Windows.Forms.TextBox();
             this.EmpEduCB = new System.Windows.Forms.ComboBox();
             this.empEducation = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.EmpDob = new System.Windows.Forms.DateTimePicker();
+            this.empPhone = new System.Windows.Forms.TextBox();
+            this.empDOB = new System.Windows.Forms.TextBox();
+            this.EmpDobDateTime = new System.Windows.Forms.DateTimePicker();
             this.EmpPositionCB = new System.Windows.Forms.ComboBox();
             this.empPosition = new System.Windows.Forms.TextBox();
             this.EmpPhoneTB = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,7 +53,7 @@ namespace EmployeeManagementApp
             this.EmpAddressTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.empName = new System.Windows.Forms.TextBox();
             this.EmpNameTB = new Guna.UI2.WinForms.Guna2TextBox();
-            this.empd = new System.Windows.Forms.TextBox();
+            this.empId = new System.Windows.Forms.TextBox();
             this.EmpIdTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.homeTitle = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -74,9 +74,9 @@ namespace EmployeeManagementApp
             this.panel1.Controls.Add(this.empGender);
             this.panel1.Controls.Add(this.EmpEduCB);
             this.panel1.Controls.Add(this.empEducation);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.EmpDob);
+            this.panel1.Controls.Add(this.empPhone);
+            this.panel1.Controls.Add(this.empDOB);
+            this.panel1.Controls.Add(this.EmpDobDateTime);
             this.panel1.Controls.Add(this.EmpPositionCB);
             this.panel1.Controls.Add(this.empPosition);
             this.panel1.Controls.Add(this.EmpPhoneTB);
@@ -84,7 +84,7 @@ namespace EmployeeManagementApp
             this.panel1.Controls.Add(this.EmpAddressTB);
             this.panel1.Controls.Add(this.empName);
             this.panel1.Controls.Add(this.EmpNameTB);
-            this.panel1.Controls.Add(this.empd);
+            this.panel1.Controls.Add(this.empId);
             this.panel1.Controls.Add(this.EmpIdTB);
             this.panel1.Location = new System.Drawing.Point(0, 104);
             this.panel1.Name = "panel1";
@@ -147,6 +147,7 @@ namespace EmployeeManagementApp
             this.EmpView.ThemeStyle.RowsStyle.Height = 22;
             this.EmpView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.OrangeRed;
             this.EmpView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.EmpView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmpView_CellContentClick);
             // 
             // empHomeBtn
             // 
@@ -223,6 +224,7 @@ namespace EmployeeManagementApp
             this.empEditBtn.Size = new System.Drawing.Size(136, 41);
             this.empEditBtn.TabIndex = 31;
             this.empEditBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.empEditBtn.Click += new System.EventHandler(this.empEditBtn_Click);
             // 
             // empAddBtn
             // 
@@ -307,40 +309,40 @@ namespace EmployeeManagementApp
             this.empEducation.TabIndex = 26;
             this.empEducation.Text = "Employee Education";
             // 
-            // textBox2
+            // empPhone
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox2.Location = new System.Drawing.Point(44, 343);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(200, 22);
-            this.textBox2.TabIndex = 25;
-            this.textBox2.Text = "Employee Phone";
+            this.empPhone.BackColor = System.Drawing.Color.White;
+            this.empPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.empPhone.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empPhone.ForeColor = System.Drawing.Color.OrangeRed;
+            this.empPhone.Location = new System.Drawing.Point(44, 343);
+            this.empPhone.Name = "empPhone";
+            this.empPhone.ReadOnly = true;
+            this.empPhone.Size = new System.Drawing.Size(200, 22);
+            this.empPhone.TabIndex = 25;
+            this.empPhone.Text = "Employee Phone";
             // 
-            // textBox1
+            // empDOB
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.textBox1.Location = new System.Drawing.Point(357, 256);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
-            this.textBox1.TabIndex = 24;
-            this.textBox1.Text = "Employee Name";
+            this.empDOB.BackColor = System.Drawing.Color.White;
+            this.empDOB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.empDOB.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empDOB.ForeColor = System.Drawing.Color.OrangeRed;
+            this.empDOB.Location = new System.Drawing.Point(357, 256);
+            this.empDOB.Name = "empDOB";
+            this.empDOB.ReadOnly = true;
+            this.empDOB.Size = new System.Drawing.Size(200, 22);
+            this.empDOB.TabIndex = 24;
+            this.empDOB.Text = "Employee Name";
             // 
-            // EmpDob
+            // EmpDobDateTime
             // 
-            this.EmpDob.CalendarFont = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmpDob.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmpDob.Location = new System.Drawing.Point(357, 287);
-            this.EmpDob.Name = "EmpDob";
-            this.EmpDob.Size = new System.Drawing.Size(316, 29);
-            this.EmpDob.TabIndex = 23;
+            this.EmpDobDateTime.CalendarFont = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpDobDateTime.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpDobDateTime.Location = new System.Drawing.Point(357, 287);
+            this.EmpDobDateTime.Name = "EmpDobDateTime";
+            this.EmpDobDateTime.Size = new System.Drawing.Size(316, 29);
+            this.EmpDobDateTime.TabIndex = 23;
             // 
             // EmpPositionCB
             // 
@@ -466,18 +468,18 @@ namespace EmployeeManagementApp
             this.EmpNameTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.EmpNameTB.TabIndex = 16;
             // 
-            // empd
+            // empId
             // 
-            this.empd.BackColor = System.Drawing.Color.White;
-            this.empd.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.empd.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empd.ForeColor = System.Drawing.Color.OrangeRed;
-            this.empd.Location = new System.Drawing.Point(47, 43);
-            this.empd.Name = "empd";
-            this.empd.ReadOnly = true;
-            this.empd.Size = new System.Drawing.Size(200, 22);
-            this.empd.TabIndex = 15;
-            this.empd.Text = "Employee Id";
+            this.empId.BackColor = System.Drawing.Color.White;
+            this.empId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.empId.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empId.ForeColor = System.Drawing.Color.OrangeRed;
+            this.empId.Location = new System.Drawing.Point(47, 43);
+            this.empId.Name = "empId";
+            this.empId.ReadOnly = true;
+            this.empId.Size = new System.Drawing.Size(200, 22);
+            this.empId.TabIndex = 15;
+            this.empId.Text = "Employee Id";
             // 
             // EmpIdTB
             // 
@@ -567,7 +569,7 @@ namespace EmployeeManagementApp
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label homeTitle;
         private Guna.UI2.WinForms.Guna2TextBox EmpIdTB;
-        private System.Windows.Forms.TextBox empd;
+        private System.Windows.Forms.TextBox empId;
         private System.Windows.Forms.TextBox empName;
         private Guna.UI2.WinForms.Guna2TextBox EmpNameTB;
         private System.Windows.Forms.TextBox empPosition;
@@ -575,9 +577,9 @@ namespace EmployeeManagementApp
         private System.Windows.Forms.TextBox empAddress;
         private Guna.UI2.WinForms.Guna2TextBox EmpAddressTB;
         private System.Windows.Forms.ComboBox EmpPositionCB;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker EmpDob;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox empDOB;
+        private System.Windows.Forms.DateTimePicker EmpDobDateTime;
+        private System.Windows.Forms.TextBox empPhone;
         private System.Windows.Forms.ComboBox EmpEduCB;
         private System.Windows.Forms.TextBox empEducation;
         private System.Windows.Forms.ComboBox EmpGenderCB;
