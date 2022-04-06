@@ -100,12 +100,12 @@ namespace EmployeeManagementApp
             this.EmpView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmpView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.EmpView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.EmpView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.EmpView.ColumnHeadersHeight = 25;
@@ -118,7 +118,7 @@ namespace EmployeeManagementApp
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.EmpView.DefaultCellStyle = dataGridViewCellStyle3;
             this.EmpView.EnableHeadersVisualStyles = false;
-            this.EmpView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.EmpView.GridColor = System.Drawing.Color.OrangeRed;
             this.EmpView.Location = new System.Drawing.Point(679, 43);
             this.EmpView.Name = "EmpView";
             this.EmpView.ReadOnly = true;
@@ -132,21 +132,21 @@ namespace EmployeeManagementApp
             this.EmpView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.EmpView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.EmpView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.EmpView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.EmpView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.EmpView.ThemeStyle.GridColor = System.Drawing.Color.OrangeRed;
+            this.EmpView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.OrangeRed;
             this.EmpView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.EmpView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.EmpView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmpView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.EmpView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.EmpView.ThemeStyle.HeaderStyle.Height = 25;
             this.EmpView.ThemeStyle.ReadOnly = true;
             this.EmpView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.EmpView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.EmpView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.EmpView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.EmpView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.OrangeRed;
             this.EmpView.ThemeStyle.RowsStyle.Height = 22;
-            this.EmpView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.EmpView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.EmpView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            this.EmpView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.EmpView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmpView_CellContentClick);
             // 
             // empHomeBtn
