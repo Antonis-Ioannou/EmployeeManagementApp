@@ -37,5 +37,12 @@ namespace EmployeeManagementApp
             viewEmp.Show();
             this.Hide();
         }
+
+        private void homeSalary_Click(object sender, EventArgs e)
+        {
+            Salary salary = new Salary();
+            salary.Show();
+            this.Hide();
+        }
     }
 }

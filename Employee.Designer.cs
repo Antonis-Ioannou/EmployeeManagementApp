@@ -336,7 +336,7 @@ namespace EmployeeManagementApp
             this.empDOB.ReadOnly = true;
             this.empDOB.Size = new System.Drawing.Size(200, 19);
             this.empDOB.TabIndex = 24;
-            this.empDOB.Text = "Employee Name";
+            this.empDOB.Text = "Employee DOB";
             // 
             // EmpDobDateTime
             // 

@@ -77,6 +77,7 @@ namespace EmployeeManagementApp
             this.homeSalary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.homeSalary.TabIndex = 17;
             this.homeSalary.TabStop = false;
+            this.homeSalary.Click += new System.EventHandler(this.homeSalary_Click);
             // 
             // homeView
             // 
