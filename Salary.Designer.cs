@@ -35,9 +35,9 @@ namespace EmployeeManagementApp
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.salHomeBtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.salDeleteBtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.salEditBtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.salAddBtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.salFetchBtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.salViewBtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.salPrintBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.salWorkedDays = new System.Windows.Forms.TextBox();
             this.salEmpPosition = new System.Windows.Forms.TextBox();
             this.salWorkedDaysTB = new Guna.UI2.WinForms.Guna2TextBox();
@@ -92,9 +92,9 @@ namespace EmployeeManagementApp
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.salarySlip);
             this.panel1.Controls.Add(this.salHomeBtn);
-            this.panel1.Controls.Add(this.salDeleteBtn);
-            this.panel1.Controls.Add(this.salEditBtn);
-            this.panel1.Controls.Add(this.salAddBtn);
+            this.panel1.Controls.Add(this.salFetchBtn);
+            this.panel1.Controls.Add(this.salViewBtn);
+            this.panel1.Controls.Add(this.salPrintBtn);
             this.panel1.Controls.Add(this.salWorkedDays);
             this.panel1.Controls.Add(this.salEmpPosition);
             this.panel1.Controls.Add(this.salWorkedDaysTB);
@@ -103,9 +103,10 @@ namespace EmployeeManagementApp
             this.panel1.Controls.Add(this.salEmpNameTB);
             this.panel1.Controls.Add(this.salEmpId);
             this.panel1.Controls.Add(this.salEmpIdTB);
+            this.panel1.ForeColor = System.Drawing.Color.DarkCyan;
             this.panel1.Location = new System.Drawing.Point(0, 135);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1033, 440);
+            this.panel1.Size = new System.Drawing.Size(1034, 440);
             this.panel1.TabIndex = 19;
             // 
             // salHomeBtn
@@ -134,80 +135,82 @@ namespace EmployeeManagementApp
             this.salHomeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.salHomeBtn.Click += new System.EventHandler(this.empHomeBtn_Click);
             // 
-            // salDeleteBtn
+            // salFetchBtn
             // 
-            this.salDeleteBtn.ActiveBorderThickness = 1;
-            this.salDeleteBtn.ActiveCornerRadius = 20;
-            this.salDeleteBtn.ActiveFillColor = System.Drawing.Color.DarkCyan;
-            this.salDeleteBtn.ActiveForecolor = System.Drawing.Color.White;
-            this.salDeleteBtn.ActiveLineColor = System.Drawing.Color.White;
-            this.salDeleteBtn.BackColor = System.Drawing.Color.White;
-            this.salDeleteBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("salDeleteBtn.BackgroundImage")));
-            this.salDeleteBtn.ButtonText = "Delete";
-            this.salDeleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.salDeleteBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salDeleteBtn.ForeColor = System.Drawing.Color.OrangeRed;
-            this.salDeleteBtn.IdleBorderThickness = 1;
-            this.salDeleteBtn.IdleCornerRadius = 20;
-            this.salDeleteBtn.IdleFillColor = System.Drawing.Color.White;
-            this.salDeleteBtn.IdleForecolor = System.Drawing.Color.DarkCyan;
-            this.salDeleteBtn.IdleLineColor = System.Drawing.Color.DarkCyan;
-            this.salDeleteBtn.Location = new System.Drawing.Point(254, 24);
-            this.salDeleteBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.salDeleteBtn.Name = "salDeleteBtn";
-            this.salDeleteBtn.Size = new System.Drawing.Size(105, 41);
-            this.salDeleteBtn.TabIndex = 32;
-            this.salDeleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.salFetchBtn.ActiveBorderThickness = 1;
+            this.salFetchBtn.ActiveCornerRadius = 20;
+            this.salFetchBtn.ActiveFillColor = System.Drawing.Color.DarkCyan;
+            this.salFetchBtn.ActiveForecolor = System.Drawing.Color.White;
+            this.salFetchBtn.ActiveLineColor = System.Drawing.Color.White;
+            this.salFetchBtn.BackColor = System.Drawing.Color.White;
+            this.salFetchBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("salFetchBtn.BackgroundImage")));
+            this.salFetchBtn.ButtonText = "Fetch Data";
+            this.salFetchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.salFetchBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salFetchBtn.ForeColor = System.Drawing.Color.OrangeRed;
+            this.salFetchBtn.IdleBorderThickness = 1;
+            this.salFetchBtn.IdleCornerRadius = 20;
+            this.salFetchBtn.IdleFillColor = System.Drawing.Color.White;
+            this.salFetchBtn.IdleForecolor = System.Drawing.Color.DarkCyan;
+            this.salFetchBtn.IdleLineColor = System.Drawing.Color.DarkCyan;
+            this.salFetchBtn.Location = new System.Drawing.Point(254, 24);
+            this.salFetchBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.salFetchBtn.Name = "salFetchBtn";
+            this.salFetchBtn.Size = new System.Drawing.Size(105, 41);
+            this.salFetchBtn.TabIndex = 32;
+            this.salFetchBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.salFetchBtn.Click += new System.EventHandler(this.salFetchBtn_Click);
             // 
-            // salEditBtn
+            // salViewBtn
             // 
-            this.salEditBtn.ActiveBorderThickness = 1;
-            this.salEditBtn.ActiveCornerRadius = 20;
-            this.salEditBtn.ActiveFillColor = System.Drawing.Color.DarkCyan;
-            this.salEditBtn.ActiveForecolor = System.Drawing.Color.White;
-            this.salEditBtn.ActiveLineColor = System.Drawing.Color.White;
-            this.salEditBtn.BackColor = System.Drawing.Color.White;
-            this.salEditBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("salEditBtn.BackgroundImage")));
-            this.salEditBtn.ButtonText = "Edit";
-            this.salEditBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.salEditBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salEditBtn.ForeColor = System.Drawing.Color.DarkCyan;
-            this.salEditBtn.IdleBorderThickness = 1;
-            this.salEditBtn.IdleCornerRadius = 20;
-            this.salEditBtn.IdleFillColor = System.Drawing.Color.White;
-            this.salEditBtn.IdleForecolor = System.Drawing.Color.DarkCyan;
-            this.salEditBtn.IdleLineColor = System.Drawing.Color.DarkCyan;
-            this.salEditBtn.Location = new System.Drawing.Point(139, 336);
-            this.salEditBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.salEditBtn.Name = "salEditBtn";
-            this.salEditBtn.Size = new System.Drawing.Size(105, 41);
-            this.salEditBtn.TabIndex = 31;
-            this.salEditBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.salViewBtn.ActiveBorderThickness = 1;
+            this.salViewBtn.ActiveCornerRadius = 20;
+            this.salViewBtn.ActiveFillColor = System.Drawing.Color.DarkCyan;
+            this.salViewBtn.ActiveForecolor = System.Drawing.Color.White;
+            this.salViewBtn.ActiveLineColor = System.Drawing.Color.White;
+            this.salViewBtn.BackColor = System.Drawing.Color.White;
+            this.salViewBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("salViewBtn.BackgroundImage")));
+            this.salViewBtn.ButtonText = "View";
+            this.salViewBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.salViewBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salViewBtn.ForeColor = System.Drawing.Color.DarkCyan;
+            this.salViewBtn.IdleBorderThickness = 1;
+            this.salViewBtn.IdleCornerRadius = 20;
+            this.salViewBtn.IdleFillColor = System.Drawing.Color.White;
+            this.salViewBtn.IdleForecolor = System.Drawing.Color.DarkCyan;
+            this.salViewBtn.IdleLineColor = System.Drawing.Color.DarkCyan;
+            this.salViewBtn.Location = new System.Drawing.Point(139, 336);
+            this.salViewBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.salViewBtn.Name = "salViewBtn";
+            this.salViewBtn.Size = new System.Drawing.Size(105, 41);
+            this.salViewBtn.TabIndex = 31;
+            this.salViewBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.salViewBtn.Click += new System.EventHandler(this.salViewBtn_Click);
             // 
-            // salAddBtn
+            // salPrintBtn
             // 
-            this.salAddBtn.ActiveBorderThickness = 1;
-            this.salAddBtn.ActiveCornerRadius = 20;
-            this.salAddBtn.ActiveFillColor = System.Drawing.Color.DarkCyan;
-            this.salAddBtn.ActiveForecolor = System.Drawing.Color.White;
-            this.salAddBtn.ActiveLineColor = System.Drawing.Color.White;
-            this.salAddBtn.BackColor = System.Drawing.Color.White;
-            this.salAddBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("salAddBtn.BackgroundImage")));
-            this.salAddBtn.ButtonText = "Add";
-            this.salAddBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.salAddBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salAddBtn.ForeColor = System.Drawing.Color.DarkCyan;
-            this.salAddBtn.IdleBorderThickness = 1;
-            this.salAddBtn.IdleCornerRadius = 20;
-            this.salAddBtn.IdleFillColor = System.Drawing.Color.White;
-            this.salAddBtn.IdleForecolor = System.Drawing.Color.DarkCyan;
-            this.salAddBtn.IdleLineColor = System.Drawing.Color.DarkCyan;
-            this.salAddBtn.Location = new System.Drawing.Point(638, 385);
-            this.salAddBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.salAddBtn.Name = "salAddBtn";
-            this.salAddBtn.Size = new System.Drawing.Size(105, 41);
-            this.salAddBtn.TabIndex = 30;
-            this.salAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.salPrintBtn.ActiveBorderThickness = 1;
+            this.salPrintBtn.ActiveCornerRadius = 20;
+            this.salPrintBtn.ActiveFillColor = System.Drawing.Color.DarkCyan;
+            this.salPrintBtn.ActiveForecolor = System.Drawing.Color.White;
+            this.salPrintBtn.ActiveLineColor = System.Drawing.Color.White;
+            this.salPrintBtn.BackColor = System.Drawing.Color.White;
+            this.salPrintBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("salPrintBtn.BackgroundImage")));
+            this.salPrintBtn.ButtonText = "Print";
+            this.salPrintBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.salPrintBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salPrintBtn.ForeColor = System.Drawing.Color.DarkCyan;
+            this.salPrintBtn.IdleBorderThickness = 1;
+            this.salPrintBtn.IdleCornerRadius = 20;
+            this.salPrintBtn.IdleFillColor = System.Drawing.Color.White;
+            this.salPrintBtn.IdleForecolor = System.Drawing.Color.DarkCyan;
+            this.salPrintBtn.IdleLineColor = System.Drawing.Color.DarkCyan;
+            this.salPrintBtn.Location = new System.Drawing.Point(611, 385);
+            this.salPrintBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.salPrintBtn.Name = "salPrintBtn";
+            this.salPrintBtn.Size = new System.Drawing.Size(105, 41);
+            this.salPrintBtn.TabIndex = 30;
+            this.salPrintBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // salWorkedDays
             // 
@@ -252,6 +255,7 @@ namespace EmployeeManagementApp
             this.salWorkedDaysTB.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.salWorkedDaysTB.Name = "salWorkedDaysTB";
             this.salWorkedDaysTB.PasswordChar = '\0';
+            this.salWorkedDaysTB.PlaceholderForeColor = System.Drawing.Color.White;
             this.salWorkedDaysTB.PlaceholderText = "";
             this.salWorkedDaysTB.SelectedText = "";
             this.salWorkedDaysTB.Size = new System.Drawing.Size(235, 24);
@@ -268,14 +272,16 @@ namespace EmployeeManagementApp
             this.salEmpPositionTB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.salEmpPositionTB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.salEmpPositionTB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.salEmpPositionTB.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salEmpPositionTB.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salEmpPositionTB.ForeColor = System.Drawing.Color.DarkCyan;
             this.salEmpPositionTB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.salEmpPositionTB.Location = new System.Drawing.Point(12, 205);
             this.salEmpPositionTB.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.salEmpPositionTB.Name = "salEmpPositionTB";
             this.salEmpPositionTB.PasswordChar = '\0';
+            this.salEmpPositionTB.PlaceholderForeColor = System.Drawing.Color.White;
             this.salEmpPositionTB.PlaceholderText = "";
+            this.salEmpPositionTB.ReadOnly = true;
             this.salEmpPositionTB.SelectedText = "";
             this.salEmpPositionTB.Size = new System.Drawing.Size(232, 28);
             this.salEmpPositionTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -311,7 +317,9 @@ namespace EmployeeManagementApp
             this.salEmpNameTB.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.salEmpNameTB.Name = "salEmpNameTB";
             this.salEmpNameTB.PasswordChar = '\0';
+            this.salEmpNameTB.PlaceholderForeColor = System.Drawing.Color.White;
             this.salEmpNameTB.PlaceholderText = "";
+            this.salEmpNameTB.ReadOnly = true;
             this.salEmpNameTB.SelectedText = "";
             this.salEmpNameTB.Size = new System.Drawing.Size(235, 26);
             this.salEmpNameTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -355,10 +363,14 @@ namespace EmployeeManagementApp
             // 
             // salarySlip
             // 
+            this.salarySlip.BackColor = System.Drawing.Color.White;
             this.salarySlip.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salarySlip.Location = new System.Drawing.Point(367, 13);
+            this.salarySlip.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salarySlip.ForeColor = System.Drawing.Color.DarkCyan;
+            this.salarySlip.Location = new System.Drawing.Point(467, 93);
             this.salarySlip.Name = "salarySlip";
-            this.salarySlip.Size = new System.Drawing.Size(655, 364);
+            this.salarySlip.ReadOnly = true;
+            this.salarySlip.Size = new System.Drawing.Size(398, 216);
             this.salarySlip.TabIndex = 35;
             this.salarySlip.Text = "";
             // 
@@ -392,9 +404,9 @@ namespace EmployeeManagementApp
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuThinButton2 salHomeBtn;
-        private Bunifu.Framework.UI.BunifuThinButton2 salDeleteBtn;
-        private Bunifu.Framework.UI.BunifuThinButton2 salEditBtn;
-        private Bunifu.Framework.UI.BunifuThinButton2 salAddBtn;
+        private Bunifu.Framework.UI.BunifuThinButton2 salFetchBtn;
+        private Bunifu.Framework.UI.BunifuThinButton2 salViewBtn;
+        private Bunifu.Framework.UI.BunifuThinButton2 salPrintBtn;
         private System.Windows.Forms.TextBox salWorkedDays;
         private System.Windows.Forms.TextBox salEmpPosition;
         private Guna.UI2.WinForms.Guna2TextBox salWorkedDaysTB;
