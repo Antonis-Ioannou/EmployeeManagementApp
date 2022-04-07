@@ -16,7 +16,7 @@ namespace EmployeeManagementApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ViewEmployee());
+            Application.Run(new Home());
         }
     }
 }

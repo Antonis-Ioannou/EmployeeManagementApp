@@ -31,7 +31,7 @@ namespace EmployeeManagementApp
                 con.Open();
                 try
                 {
-                    string query = "insert into Employee values('"+EmpIdTB.Text+"','"+EmpNameTB.Text+"','"+EmpAddressTB.Text+"','"+EmpPositionCB.SelectedItem.ToString()+"','"+EmpDobDateTime.Value.Date+"','"+EmpPhoneTB.Text+"','"+EmpEduCB.SelectedItem.ToString()+"','"+EmpGenderCB.SelectedItem.ToString()+"')";
+                    string query = "insert into Employee values('"+EmpIdTB.Text+"','"+EmpNameTB.Text+"','"+EmpAddressTB.Text+"','"+EmpPositionCB.SelectedItem.ToString()+"','"+EmpDobDateTime.Value.Date.ToString("d")+"','"+EmpPhoneTB.Text+"','"+EmpEduCB.SelectedItem.ToString()+"','"+EmpGenderCB.SelectedItem.ToString()+"')";
                     SqlCommand cmd = new SqlCommand(query,con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Employee Successfully Added");
@@ -116,7 +116,7 @@ namespace EmployeeManagementApp
                 con.Open();
                 try
                 {
-                    string query = "update Employee set EmpName='"+EmpNameTB.Text+"',EmpAddress='"+EmpAddressTB.Text+"',EmpPosition='"+EmpPositionCB.SelectedItem.ToString()+"',EmpDOB='"+EmpDobDateTime.Value.Date+"',EmpPhone='"+EmpPhoneTB.Text+"',EmpEdu='"+EmpEduCB.SelectedItem.ToString()+"',EmpGender='"+EmpGenderCB.SelectedItem.ToString()+"' where EmpId='"+EmpIdTB.Text+"';";
+                    string query = "update Employee set EmpName='"+EmpNameTB.Text+"',EmpAddress='"+EmpAddressTB.Text+"',EmpPosition='"+EmpPositionCB.SelectedItem.ToString()+"',EmpDOB='"+EmpDobDateTime.Value.Date.ToString("d")+"',EmpPhone='"+EmpPhoneTB.Text+"',EmpEdu='"+EmpEduCB.SelectedItem.ToString()+"',EmpGender='"+EmpGenderCB.SelectedItem.ToString()+"' where EmpId='"+EmpIdTB.Text+"';";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Employee Successfully Eddited");

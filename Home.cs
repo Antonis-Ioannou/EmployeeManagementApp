@@ -30,5 +30,12 @@ namespace EmployeeManagementApp
             log.Show();
             this.Hide();
         }
+
+        private void homeView_Click(object sender, EventArgs e)
+        {
+            ViewEmployee viewEmp = new ViewEmployee();
+            viewEmp.Show();
+            this.Hide();
+        }
     }
 }
