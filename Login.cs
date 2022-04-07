@@ -16,5 +16,23 @@ namespace EmployeeManagementApp
         {
             InitializeComponent();
         }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            if (loginUserIdTbox.Text=="" || loginPasswordTbox.Text=="")
+            {
+                MessageBox.Show("Enter login and password!");
+            }
+            else if (loginUserIdTbox.Text=="Admin" || loginPasswordTbox.Text=="Admin123")
+            {
+                Home home = new Home();
+                home.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Wrong user name or password!");
+            }
+        }
     }
 }

@@ -32,13 +32,11 @@ namespace EmployeeManagementApp
             this.splashTitle = new System.Windows.Forms.Label();
             this.userId = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.Label();
-            this.passwordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.loginPasswordTbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.loginBtn = new Guna.UI2.WinForms.Guna2Button();
             this.clearBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loginUserIdTbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +45,7 @@ namespace EmployeeManagementApp
             this.splashTitle.AutoSize = true;
             this.splashTitle.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splashTitle.ForeColor = System.Drawing.Color.DarkCyan;
-            this.splashTitle.Location = new System.Drawing.Point(437, 9);
+            this.splashTitle.Location = new System.Drawing.Point(344, 9);
             this.splashTitle.Name = "splashTitle";
             this.splashTitle.Size = new System.Drawing.Size(147, 28);
             this.splashTitle.TabIndex = 1;
@@ -58,7 +56,7 @@ namespace EmployeeManagementApp
             this.userId.AutoSize = true;
             this.userId.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userId.ForeColor = System.Drawing.Color.DarkCyan;
-            this.userId.Location = new System.Drawing.Point(227, 105);
+            this.userId.Location = new System.Drawing.Point(146, 81);
             this.userId.Name = "userId";
             this.userId.Size = new System.Drawing.Size(82, 28);
             this.userId.TabIndex = 3;
@@ -69,33 +67,33 @@ namespace EmployeeManagementApp
             this.password.AutoSize = true;
             this.password.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password.ForeColor = System.Drawing.Color.DarkCyan;
-            this.password.Location = new System.Drawing.Point(199, 269);
+            this.password.Location = new System.Drawing.Point(146, 181);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(100, 28);
             this.password.TabIndex = 5;
             this.password.Text = "Password";
             // 
-            // passwordTextBox
+            // loginPasswordTbox
             // 
-            this.passwordTextBox.BorderColor = System.Drawing.Color.DarkCyan;
-            this.passwordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.passwordTextBox.DefaultText = "";
-            this.passwordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.passwordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.passwordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.passwordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.passwordTextBox.FillColor = System.Drawing.SystemColors.Control;
-            this.passwordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.passwordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.passwordTextBox.Location = new System.Drawing.Point(318, 269);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = '\0';
-            this.passwordTextBox.PlaceholderText = "";
-            this.passwordTextBox.SelectedText = "";
-            this.passwordTextBox.Size = new System.Drawing.Size(239, 28);
-            this.passwordTextBox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.passwordTextBox.TabIndex = 7;
+            this.loginPasswordTbox.BorderColor = System.Drawing.Color.DarkCyan;
+            this.loginPasswordTbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.loginPasswordTbox.DefaultText = "";
+            this.loginPasswordTbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.loginPasswordTbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.loginPasswordTbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.loginPasswordTbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.loginPasswordTbox.FillColor = System.Drawing.SystemColors.Control;
+            this.loginPasswordTbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.loginPasswordTbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.loginPasswordTbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.loginPasswordTbox.Location = new System.Drawing.Point(252, 181);
+            this.loginPasswordTbox.Name = "loginPasswordTbox";
+            this.loginPasswordTbox.PasswordChar = '\0';
+            this.loginPasswordTbox.PlaceholderText = "";
+            this.loginPasswordTbox.SelectedText = "";
+            this.loginPasswordTbox.Size = new System.Drawing.Size(239, 28);
+            this.loginPasswordTbox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.loginPasswordTbox.TabIndex = 7;
             // 
             // loginBtn
             // 
@@ -106,11 +104,13 @@ namespace EmployeeManagementApp
             this.loginBtn.FillColor = System.Drawing.Color.DarkCyan;
             this.loginBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.loginBtn.ForeColor = System.Drawing.Color.White;
-            this.loginBtn.Location = new System.Drawing.Point(274, 323);
+            this.loginBtn.HoverState.BorderColor = System.Drawing.Color.Cyan;
+            this.loginBtn.Location = new System.Drawing.Point(252, 237);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(83, 34);
             this.loginBtn.TabIndex = 8;
             this.loginBtn.Text = "Login";
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
             // clearBtn
             // 
@@ -121,48 +121,38 @@ namespace EmployeeManagementApp
             this.clearBtn.FillColor = System.Drawing.Color.DarkCyan;
             this.clearBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.clearBtn.ForeColor = System.Drawing.Color.White;
-            this.clearBtn.Location = new System.Drawing.Point(474, 323);
+            this.clearBtn.Location = new System.Drawing.Point(408, 237);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(83, 34);
             this.clearBtn.TabIndex = 9;
             this.clearBtn.Text = "Clear";
             // 
-            // guna2TextBox1
+            // loginUserIdTbox
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.DarkCyan;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.SystemColors.Control;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(318, 105);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(239, 28);
-            this.guna2TextBox1.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.guna2TextBox1.TabIndex = 10;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::EmployeeManagementApp.Properties.Resources.userid;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.loginUserIdTbox.BorderColor = System.Drawing.Color.DarkCyan;
+            this.loginUserIdTbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.loginUserIdTbox.DefaultText = "";
+            this.loginUserIdTbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.loginUserIdTbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.loginUserIdTbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.loginUserIdTbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.loginUserIdTbox.FillColor = System.Drawing.SystemColors.Control;
+            this.loginUserIdTbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.loginUserIdTbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.loginUserIdTbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.loginUserIdTbox.Location = new System.Drawing.Point(252, 81);
+            this.loginUserIdTbox.Name = "loginUserIdTbox";
+            this.loginUserIdTbox.PasswordChar = '\0';
+            this.loginUserIdTbox.PlaceholderText = "";
+            this.loginUserIdTbox.SelectedText = "";
+            this.loginUserIdTbox.Size = new System.Drawing.Size(239, 28);
+            this.loginUserIdTbox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.loginUserIdTbox.TabIndex = 10;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::EmployeeManagementApp.Properties.Resources.password;
-            this.pictureBox2.Location = new System.Drawing.Point(51, 229);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 81);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(128, 128);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -173,13 +163,12 @@ namespace EmployeeManagementApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 391);
+            this.ClientSize = new System.Drawing.Size(509, 306);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.loginUserIdTbox);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.loginBtn);
-            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.loginPasswordTbox);
             this.Controls.Add(this.password);
             this.Controls.Add(this.userId);
             this.Controls.Add(this.splashTitle);
@@ -187,7 +176,6 @@ namespace EmployeeManagementApp
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,11 +187,10 @@ namespace EmployeeManagementApp
         private System.Windows.Forms.Label splashTitle;
         private System.Windows.Forms.Label userId;
         private System.Windows.Forms.Label password;
-        private Guna.UI2.WinForms.Guna2TextBox passwordTextBox;
+        private Guna.UI2.WinForms.Guna2TextBox loginPasswordTbox;
         private Guna.UI2.WinForms.Guna2Button loginBtn;
         private Guna.UI2.WinForms.Guna2Button clearBtn;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2TextBox loginUserIdTbox;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

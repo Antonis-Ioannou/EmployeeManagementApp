@@ -246,6 +246,7 @@
   <ItemGroup>
     <Content Include="images\employee.png" />
     <Content Include="images\home.png" />
+    <Content Include="images\login.png" />
     <Content Include="images\logout-rounded.png" />
     <Content Include="images\logout.png" />
     <Content Include="images\password.png" />
