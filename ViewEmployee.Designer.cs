@@ -46,7 +46,7 @@ namespace EmployeeManagementApp
             this.detailId = new System.Windows.Forms.TextBox();
             this.detailRefreshBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.empHomeBtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.empAddBtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.empPrintBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.detailGender = new System.Windows.Forms.TextBox();
             this.detailEducation = new System.Windows.Forms.TextBox();
             this.detailPhone = new System.Windows.Forms.TextBox();
@@ -56,6 +56,8 @@ namespace EmployeeManagementApp
             this.detailName = new System.Windows.Forms.TextBox();
             this.viewEmpId = new System.Windows.Forms.TextBox();
             this.viewEmpIdTbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.viewformEmployee)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -123,7 +125,7 @@ namespace EmployeeManagementApp
             this.panel1.Controls.Add(this.detailId);
             this.panel1.Controls.Add(this.detailRefreshBtn);
             this.panel1.Controls.Add(this.empHomeBtn);
-            this.panel1.Controls.Add(this.empAddBtn);
+            this.panel1.Controls.Add(this.empPrintBtn);
             this.panel1.Controls.Add(this.detailGender);
             this.panel1.Controls.Add(this.detailEducation);
             this.panel1.Controls.Add(this.detailPhone);
@@ -307,30 +309,31 @@ namespace EmployeeManagementApp
             this.empHomeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.empHomeBtn.Click += new System.EventHandler(this.empHomeBtn_Click);
             // 
-            // empAddBtn
+            // empPrintBtn
             // 
-            this.empAddBtn.ActiveBorderThickness = 1;
-            this.empAddBtn.ActiveCornerRadius = 20;
-            this.empAddBtn.ActiveFillColor = System.Drawing.Color.DarkCyan;
-            this.empAddBtn.ActiveForecolor = System.Drawing.Color.White;
-            this.empAddBtn.ActiveLineColor = System.Drawing.Color.White;
-            this.empAddBtn.BackColor = System.Drawing.Color.White;
-            this.empAddBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("empAddBtn.BackgroundImage")));
-            this.empAddBtn.ButtonText = "Print";
-            this.empAddBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.empAddBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empAddBtn.ForeColor = System.Drawing.Color.DarkCyan;
-            this.empAddBtn.IdleBorderThickness = 1;
-            this.empAddBtn.IdleCornerRadius = 20;
-            this.empAddBtn.IdleFillColor = System.Drawing.Color.White;
-            this.empAddBtn.IdleForecolor = System.Drawing.Color.DarkCyan;
-            this.empAddBtn.IdleLineColor = System.Drawing.Color.DarkCyan;
-            this.empAddBtn.Location = new System.Drawing.Point(222, 424);
-            this.empAddBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.empAddBtn.Name = "empAddBtn";
-            this.empAddBtn.Size = new System.Drawing.Size(136, 41);
-            this.empAddBtn.TabIndex = 50;
-            this.empAddBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.empPrintBtn.ActiveBorderThickness = 1;
+            this.empPrintBtn.ActiveCornerRadius = 20;
+            this.empPrintBtn.ActiveFillColor = System.Drawing.Color.DarkCyan;
+            this.empPrintBtn.ActiveForecolor = System.Drawing.Color.White;
+            this.empPrintBtn.ActiveLineColor = System.Drawing.Color.White;
+            this.empPrintBtn.BackColor = System.Drawing.Color.White;
+            this.empPrintBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("empPrintBtn.BackgroundImage")));
+            this.empPrintBtn.ButtonText = "Print";
+            this.empPrintBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.empPrintBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empPrintBtn.ForeColor = System.Drawing.Color.DarkCyan;
+            this.empPrintBtn.IdleBorderThickness = 1;
+            this.empPrintBtn.IdleCornerRadius = 20;
+            this.empPrintBtn.IdleFillColor = System.Drawing.Color.White;
+            this.empPrintBtn.IdleForecolor = System.Drawing.Color.DarkCyan;
+            this.empPrintBtn.IdleLineColor = System.Drawing.Color.DarkCyan;
+            this.empPrintBtn.Location = new System.Drawing.Point(222, 424);
+            this.empPrintBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.empPrintBtn.Name = "empPrintBtn";
+            this.empPrintBtn.Size = new System.Drawing.Size(136, 41);
+            this.empPrintBtn.TabIndex = 50;
+            this.empPrintBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.empPrintBtn.Click += new System.EventHandler(this.empPrintBtn_Click);
             // 
             // detailGender
             // 
@@ -440,7 +443,7 @@ namespace EmployeeManagementApp
             // 
             this.viewEmpIdTbox.BorderColor = System.Drawing.Color.DarkCyan;
             this.viewEmpIdTbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.viewEmpIdTbox.DefaultText = "";
+            this.viewEmpIdTbox.DefaultText = "XYZ";
             this.viewEmpIdTbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.viewEmpIdTbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.viewEmpIdTbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -458,6 +461,22 @@ namespace EmployeeManagementApp
             this.viewEmpIdTbox.Size = new System.Drawing.Size(211, 26);
             this.viewEmpIdTbox.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.viewEmpIdTbox.TabIndex = 34;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
             // 
             // ViewEmployee
             // 
@@ -491,7 +510,7 @@ namespace EmployeeManagementApp
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuThinButton2 empHomeBtn;
-        private Bunifu.Framework.UI.BunifuThinButton2 empAddBtn;
+        private Bunifu.Framework.UI.BunifuThinButton2 empPrintBtn;
         private System.Windows.Forms.TextBox detailGender;
         private System.Windows.Forms.TextBox detailEducation;
         private System.Windows.Forms.TextBox detailPhone;
@@ -511,5 +530,7 @@ namespace EmployeeManagementApp
         private System.Windows.Forms.TextBox detailPhone2;
         private System.Windows.Forms.TextBox detailPosition2;
         private System.Windows.Forms.TextBox detailAddress2;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

@@ -79,5 +79,31 @@ namespace EmployeeManagementApp
         {
             fetchData();
         }
+
+        private void empPrintBtn_Click(object sender, EventArgs e)
+        {
+            if (printPreviewDialog1.ShowDialog()==DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("=====Employee Summary=====",new Font("Century Gothic",25,FontStyle.Bold),Brushes.Red,new Point(160));
+            e.Graphics.DrawString("Employee Id: "+detailId2.Text,new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Blue, new Point(80, 150));
+            e.Graphics.DrawString("Employee Name: " + detailName2.Text, new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Blue, new Point(80, 200));
+            e.Graphics.DrawString("Employee Address: " + detailAddress2.Text, new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Blue, new Point(80, 250));
+            e.Graphics.DrawString("Employee Gender: " + detailGender2.Text, new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Blue, new Point(80, 300));
+            e.Graphics.DrawString("Employee Position: " + detailPosition2.Text, new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Blue, new Point(80, 350));
+            e.Graphics.DrawString("Employee DOB: " + detailDOB2.Text, new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Blue, new Point(80, 400));
+            e.Graphics.DrawString("Employee Phone: " + detailPhone2.Text, new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Blue, new Point(80, 450));
+            e.Graphics.DrawString("Employee Education: " + detailEducation2.Text, new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Blue, new Point(80, 500));
+        }
     }
 }
