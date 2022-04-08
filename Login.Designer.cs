@@ -84,7 +84,8 @@ namespace EmployeeManagementApp
             this.loginPasswordTbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.loginPasswordTbox.FillColor = System.Drawing.SystemColors.Control;
             this.loginPasswordTbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.loginPasswordTbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.loginPasswordTbox.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginPasswordTbox.ForeColor = System.Drawing.Color.DarkCyan;
             this.loginPasswordTbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.loginPasswordTbox.Location = new System.Drawing.Point(252, 181);
             this.loginPasswordTbox.Name = "loginPasswordTbox";
@@ -138,7 +139,8 @@ namespace EmployeeManagementApp
             this.loginUserIdTbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.loginUserIdTbox.FillColor = System.Drawing.SystemColors.Control;
             this.loginUserIdTbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.loginUserIdTbox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.loginUserIdTbox.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginUserIdTbox.ForeColor = System.Drawing.Color.DarkCyan;
             this.loginUserIdTbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.loginUserIdTbox.Location = new System.Drawing.Point(252, 81);
             this.loginUserIdTbox.Name = "loginUserIdTbox";
