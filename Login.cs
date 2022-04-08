@@ -21,7 +21,7 @@ namespace EmployeeManagementApp
         {
             if (loginUserIdTbox.Text=="" || loginPasswordTbox.Text=="")
             {
-                MessageBox.Show("Enter login and password!");
+                MessageBox.Show("Login or password missing!");
             }
             else if (loginUserIdTbox.Text=="Admin" || loginPasswordTbox.Text=="Admin123")
             {

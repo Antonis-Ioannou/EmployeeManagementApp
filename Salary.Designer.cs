@@ -34,6 +34,7 @@ namespace EmployeeManagementApp
             this.salaryTitle = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.salarySlip = new System.Windows.Forms.RichTextBox();
             this.salHomeBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.salFetchBtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.salViewBtn = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -46,7 +47,8 @@ namespace EmployeeManagementApp
             this.salEmpNameTB = new Guna.UI2.WinForms.Guna2TextBox();
             this.salEmpId = new System.Windows.Forms.TextBox();
             this.salEmpIdTB = new Guna.UI2.WinForms.Guna2TextBox();
-            this.salarySlip = new System.Windows.Forms.RichTextBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.salaryEmployee)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +110,19 @@ namespace EmployeeManagementApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1034, 440);
             this.panel1.TabIndex = 19;
+            // 
+            // salarySlip
+            // 
+            this.salarySlip.BackColor = System.Drawing.Color.White;
+            this.salarySlip.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.salarySlip.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salarySlip.ForeColor = System.Drawing.Color.DarkCyan;
+            this.salarySlip.Location = new System.Drawing.Point(467, 93);
+            this.salarySlip.Name = "salarySlip";
+            this.salarySlip.ReadOnly = true;
+            this.salarySlip.Size = new System.Drawing.Size(398, 216);
+            this.salarySlip.TabIndex = 35;
+            this.salarySlip.Text = "";
             // 
             // salHomeBtn
             // 
@@ -211,6 +226,7 @@ namespace EmployeeManagementApp
             this.salPrintBtn.Size = new System.Drawing.Size(105, 41);
             this.salPrintBtn.TabIndex = 30;
             this.salPrintBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.salPrintBtn.Click += new System.EventHandler(this.salPrintBtn_Click);
             // 
             // salWorkedDays
             // 
@@ -361,18 +377,20 @@ namespace EmployeeManagementApp
             this.salEmpIdTB.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.salEmpIdTB.TabIndex = 14;
             // 
-            // salarySlip
+            // printDocument1
             // 
-            this.salarySlip.BackColor = System.Drawing.Color.White;
-            this.salarySlip.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.salarySlip.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salarySlip.ForeColor = System.Drawing.Color.DarkCyan;
-            this.salarySlip.Location = new System.Drawing.Point(467, 93);
-            this.salarySlip.Name = "salarySlip";
-            this.salarySlip.ReadOnly = true;
-            this.salarySlip.Size = new System.Drawing.Size(398, 216);
-            this.salarySlip.TabIndex = 35;
-            this.salarySlip.Text = "";
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Salary
             // 
@@ -416,5 +434,7 @@ namespace EmployeeManagementApp
         private System.Windows.Forms.TextBox salEmpId;
         private Guna.UI2.WinForms.Guna2TextBox salEmpIdTB;
         private System.Windows.Forms.RichTextBox salarySlip;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
