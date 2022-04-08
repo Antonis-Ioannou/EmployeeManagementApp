@@ -32,9 +32,6 @@ namespace EmployeeManagementApp
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.homePanel = new System.Windows.Forms.Panel();
-            this.homeSalary = new System.Windows.Forms.PictureBox();
-            this.homeView = new System.Windows.Forms.PictureBox();
-            this.homeEmployee = new System.Windows.Forms.PictureBox();
             this.homeSalaryLabel = new System.Windows.Forms.Label();
             this.homeViewLabel = new System.Windows.Forms.Label();
             this.homeEmpLabel = new System.Windows.Forms.Label();
@@ -42,15 +39,18 @@ namespace EmployeeManagementApp
             this.homeTitle = new System.Windows.Forms.Label();
             this.homeLogout = new System.Windows.Forms.Label();
             this.homeSignature = new System.Windows.Forms.Label();
-            this.logoutIcon = new System.Windows.Forms.PictureBox();
+            this.homeExit = new System.Windows.Forms.PictureBox();
             this.homeIcon = new System.Windows.Forms.PictureBox();
+            this.homeSalary = new System.Windows.Forms.PictureBox();
+            this.homeView = new System.Windows.Forms.PictureBox();
+            this.homeEmployee = new System.Windows.Forms.PictureBox();
             this.homePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeSalary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoutIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // homePanel
@@ -66,42 +66,6 @@ namespace EmployeeManagementApp
             this.homePanel.Name = "homePanel";
             this.homePanel.Size = new System.Drawing.Size(852, 235);
             this.homePanel.TabIndex = 0;
-            // 
-            // homeSalary
-            // 
-            this.homeSalary.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homeSalary.Image = global::EmployeeManagementApp.Properties.Resources.salary;
-            this.homeSalary.Location = new System.Drawing.Point(617, 42);
-            this.homeSalary.Name = "homeSalary";
-            this.homeSalary.Size = new System.Drawing.Size(128, 128);
-            this.homeSalary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.homeSalary.TabIndex = 17;
-            this.homeSalary.TabStop = false;
-            this.homeSalary.Click += new System.EventHandler(this.homeSalary_Click);
-            // 
-            // homeView
-            // 
-            this.homeView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homeView.Image = global::EmployeeManagementApp.Properties.Resources.view;
-            this.homeView.Location = new System.Drawing.Point(367, 50);
-            this.homeView.Name = "homeView";
-            this.homeView.Size = new System.Drawing.Size(120, 120);
-            this.homeView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.homeView.TabIndex = 16;
-            this.homeView.TabStop = false;
-            this.homeView.Click += new System.EventHandler(this.homeView_Click);
-            // 
-            // homeEmployee
-            // 
-            this.homeEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homeEmployee.Image = ((System.Drawing.Image)(resources.GetObject("homeEmployee.Image")));
-            this.homeEmployee.Location = new System.Drawing.Point(112, 42);
-            this.homeEmployee.Name = "homeEmployee";
-            this.homeEmployee.Size = new System.Drawing.Size(128, 128);
-            this.homeEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.homeEmployee.TabIndex = 15;
-            this.homeEmployee.TabStop = false;
-            this.homeEmployee.Click += new System.EventHandler(this.homeEmployee_Click);
             // 
             // homeSalaryLabel
             // 
@@ -144,7 +108,7 @@ namespace EmployeeManagementApp
             this.homeTitle.AutoSize = true;
             this.homeTitle.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeTitle.ForeColor = System.Drawing.Color.White;
-            this.homeTitle.Location = new System.Drawing.Point(130, 47);
+            this.homeTitle.Location = new System.Drawing.Point(69, 6);
             this.homeTitle.Name = "homeTitle";
             this.homeTitle.Size = new System.Drawing.Size(85, 34);
             this.homeTitle.TabIndex = 2;
@@ -155,7 +119,7 @@ namespace EmployeeManagementApp
             this.homeLogout.AutoSize = true;
             this.homeLogout.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeLogout.ForeColor = System.Drawing.Color.White;
-            this.homeLogout.Location = new System.Drawing.Point(758, 84);
+            this.homeLogout.Location = new System.Drawing.Point(692, 12);
             this.homeLogout.Name = "homeLogout";
             this.homeLogout.Size = new System.Drawing.Size(80, 28);
             this.homeLogout.TabIndex = 14;
@@ -173,27 +137,62 @@ namespace EmployeeManagementApp
             this.homeSignature.Text = "aidubxr 2022";
             this.homeSignature.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // logoutIcon
+            // homeExit
             // 
-            this.logoutIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutIcon.Image = global::EmployeeManagementApp.Properties.Resources.logout_rounded;
-            this.logoutIcon.Location = new System.Drawing.Point(759, 3);
-            this.logoutIcon.Name = "logoutIcon";
-            this.logoutIcon.Size = new System.Drawing.Size(79, 78);
-            this.logoutIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.logoutIcon.TabIndex = 17;
-            this.logoutIcon.TabStop = false;
-            this.logoutIcon.Click += new System.EventHandler(this.logoutIcon_Click);
+            this.homeExit.Image = global::EmployeeManagementApp.Properties.Resources.shutdown;
+            this.homeExit.Location = new System.Drawing.Point(778, 12);
+            this.homeExit.Name = "homeExit";
+            this.homeExit.Size = new System.Drawing.Size(60, 60);
+            this.homeExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.homeExit.TabIndex = 17;
+            this.homeExit.TabStop = false;
+            this.homeExit.Click += new System.EventHandler(this.homeExit_Click);
             // 
             // homeIcon
             // 
-            this.homeIcon.Image = global::EmployeeManagementApp.Properties.Resources.home;
+            this.homeIcon.Image = global::EmployeeManagementApp.Properties.Resources.home_page;
             this.homeIcon.Location = new System.Drawing.Point(3, 3);
             this.homeIcon.Name = "homeIcon";
-            this.homeIcon.Size = new System.Drawing.Size(121, 134);
-            this.homeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.homeIcon.Size = new System.Drawing.Size(60, 60);
+            this.homeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.homeIcon.TabIndex = 16;
             this.homeIcon.TabStop = false;
+            // 
+            // homeSalary
+            // 
+            this.homeSalary.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeSalary.Image = global::EmployeeManagementApp.Properties.Resources.salary;
+            this.homeSalary.Location = new System.Drawing.Point(617, 42);
+            this.homeSalary.Name = "homeSalary";
+            this.homeSalary.Size = new System.Drawing.Size(128, 128);
+            this.homeSalary.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.homeSalary.TabIndex = 17;
+            this.homeSalary.TabStop = false;
+            this.homeSalary.Click += new System.EventHandler(this.homeSalary_Click);
+            // 
+            // homeView
+            // 
+            this.homeView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeView.Image = global::EmployeeManagementApp.Properties.Resources.view;
+            this.homeView.Location = new System.Drawing.Point(367, 50);
+            this.homeView.Name = "homeView";
+            this.homeView.Size = new System.Drawing.Size(120, 120);
+            this.homeView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.homeView.TabIndex = 16;
+            this.homeView.TabStop = false;
+            this.homeView.Click += new System.EventHandler(this.homeView_Click);
+            // 
+            // homeEmployee
+            // 
+            this.homeEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeEmployee.Image = ((System.Drawing.Image)(resources.GetObject("homeEmployee.Image")));
+            this.homeEmployee.Location = new System.Drawing.Point(112, 42);
+            this.homeEmployee.Name = "homeEmployee";
+            this.homeEmployee.Size = new System.Drawing.Size(128, 128);
+            this.homeEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.homeEmployee.TabIndex = 15;
+            this.homeEmployee.TabStop = false;
+            this.homeEmployee.Click += new System.EventHandler(this.homeEmployee_Click);
             // 
             // Home
             // 
@@ -201,7 +200,7 @@ namespace EmployeeManagementApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(850, 406);
-            this.Controls.Add(this.logoutIcon);
+            this.Controls.Add(this.homeExit);
             this.Controls.Add(this.homeIcon);
             this.Controls.Add(this.homeSignature);
             this.Controls.Add(this.homeLogout);
@@ -213,12 +212,12 @@ namespace EmployeeManagementApp
             this.Text = "Home";
             this.homePanel.ResumeLayout(false);
             this.homePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeSalary)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.homeEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoutIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,6 +237,6 @@ namespace EmployeeManagementApp
         private System.Windows.Forms.PictureBox homeSalary;
         private System.Windows.Forms.PictureBox homeView;
         private System.Windows.Forms.PictureBox homeIcon;
-        private System.Windows.Forms.PictureBox logoutIcon;
+        private System.Windows.Forms.PictureBox homeExit;
     }
 }

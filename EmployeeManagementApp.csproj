@@ -245,12 +245,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\employee.png" />
-    <Content Include="images\home.png" />
+    <Content Include="images\home-page.png" />
     <Content Include="images\login.png" />
-    <Content Include="images\logout-rounded.png" />
-    <Content Include="images\logout.png" />
     <Content Include="images\password.png" />
     <Content Include="images\salary.png" />
+    <Content Include="images\shutdown.png" />
     <Content Include="images\splash.png" />
     <Content Include="images\userid.png" />
     <Content Include="images\view.png" />

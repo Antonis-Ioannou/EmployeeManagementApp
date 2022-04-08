@@ -24,7 +24,7 @@ namespace EmployeeManagementApp
             this.Hide();
         }
 
-        private void logoutIcon_Click(object sender, EventArgs e)
+        private void homeExit_Click(object sender, EventArgs e)
         {
             Login log = new Login();
             log.Show();

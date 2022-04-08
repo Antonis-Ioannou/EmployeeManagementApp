@@ -34,5 +34,10 @@ namespace EmployeeManagementApp
                 MessageBox.Show("Wrong user name or password!");
             }
         }
+
+        private void loginExitLabel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -37,6 +37,7 @@ namespace EmployeeManagementApp
             this.clearBtn = new Guna.UI2.WinForms.Guna2Button();
             this.loginUserIdTbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.loginExitLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@ namespace EmployeeManagementApp
             this.splashTitle.AutoSize = true;
             this.splashTitle.Font = new System.Drawing.Font("MV Boli", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splashTitle.ForeColor = System.Drawing.Color.DarkCyan;
-            this.splashTitle.Location = new System.Drawing.Point(344, 9);
+            this.splashTitle.Location = new System.Drawing.Point(12, 9);
             this.splashTitle.Name = "splashTitle";
             this.splashTitle.Size = new System.Drawing.Size(147, 28);
             this.splashTitle.TabIndex = 1;
@@ -88,6 +89,7 @@ namespace EmployeeManagementApp
             this.loginPasswordTbox.ForeColor = System.Drawing.Color.DarkCyan;
             this.loginPasswordTbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.loginPasswordTbox.Location = new System.Drawing.Point(252, 181);
+            this.loginPasswordTbox.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.loginPasswordTbox.Name = "loginPasswordTbox";
             this.loginPasswordTbox.PasswordChar = '\0';
             this.loginPasswordTbox.PlaceholderText = "";
@@ -98,6 +100,9 @@ namespace EmployeeManagementApp
             // 
             // loginBtn
             // 
+            this.loginBtn.Animated = true;
+            this.loginBtn.AutoRoundedCorners = true;
+            this.loginBtn.BorderRadius = 16;
             this.loginBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.loginBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.loginBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -106,6 +111,7 @@ namespace EmployeeManagementApp
             this.loginBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.loginBtn.ForeColor = System.Drawing.Color.White;
             this.loginBtn.HoverState.BorderColor = System.Drawing.Color.Cyan;
+            this.loginBtn.IndicateFocus = true;
             this.loginBtn.Location = new System.Drawing.Point(252, 237);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(83, 34);
@@ -115,6 +121,9 @@ namespace EmployeeManagementApp
             // 
             // clearBtn
             // 
+            this.clearBtn.Animated = true;
+            this.clearBtn.AutoRoundedCorners = true;
+            this.clearBtn.BorderRadius = 16;
             this.clearBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.clearBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.clearBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -122,6 +131,7 @@ namespace EmployeeManagementApp
             this.clearBtn.FillColor = System.Drawing.Color.DarkCyan;
             this.clearBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.clearBtn.ForeColor = System.Drawing.Color.White;
+            this.clearBtn.IndicateFocus = true;
             this.clearBtn.Location = new System.Drawing.Point(408, 237);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(83, 34);
@@ -143,6 +153,7 @@ namespace EmployeeManagementApp
             this.loginUserIdTbox.ForeColor = System.Drawing.Color.DarkCyan;
             this.loginUserIdTbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.loginUserIdTbox.Location = new System.Drawing.Point(252, 81);
+            this.loginUserIdTbox.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.loginUserIdTbox.Name = "loginUserIdTbox";
             this.loginUserIdTbox.PasswordChar = '\0';
             this.loginUserIdTbox.PlaceholderText = "";
@@ -161,11 +172,25 @@ namespace EmployeeManagementApp
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
+            // loginExitLabel
+            // 
+            this.loginExitLabel.AutoSize = true;
+            this.loginExitLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.loginExitLabel.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginExitLabel.ForeColor = System.Drawing.Color.DarkCyan;
+            this.loginExitLabel.Location = new System.Drawing.Point(471, 9);
+            this.loginExitLabel.Name = "loginExitLabel";
+            this.loginExitLabel.Size = new System.Drawing.Size(26, 23);
+            this.loginExitLabel.TabIndex = 15;
+            this.loginExitLabel.Text = "X";
+            this.loginExitLabel.Click += new System.EventHandler(this.loginExitLabel_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(509, 306);
+            this.Controls.Add(this.loginExitLabel);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.loginUserIdTbox);
             this.Controls.Add(this.clearBtn);
@@ -194,5 +219,6 @@ namespace EmployeeManagementApp
         private Guna.UI2.WinForms.Guna2Button clearBtn;
         private Guna.UI2.WinForms.Guna2TextBox loginUserIdTbox;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label loginExitLabel;
     }
 }
